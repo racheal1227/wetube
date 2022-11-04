@@ -3,8 +3,8 @@ import { deleteUser, editUser, user } from '../controllers/userController';
 
 const userRouter = express.Router();
 
-userRouter.get('/get', user);
-userRouter.get('/edit', editUser);
-userRouter.get('/delete', deleteUser);
+userRouter.get('/:id', user);
+userRouter.get('/:id/edit', editUser);
+userRouter.get('/:id/delete', deleteUser);
 
 export default userRouter;
